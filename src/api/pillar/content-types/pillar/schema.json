@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pillars",
+  "info": {
+    "singularName": "pillar",
+    "pluralName": "pillars",
+    "displayName": "pillar"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "created_on": {
+      "type": "date"
+    },
+    "edited_on": {
+      "type": "date"
+    },
+    "content": {
+      "type": "blocks"
+    },
+    "connected_targets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::targeted.targeted",
+      "mappedBy": "pillar"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::author.author",
+      "inversedBy": "pillars"
+    }
+  }
+}

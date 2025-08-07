@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "targeteds",
+  "info": {
+    "singularName": "targeted",
+    "pluralName": "targeteds",
+    "displayName": "targeted"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "blocks"
+    },
+    "created_on": {
+      "type": "date"
+    },
+    "edited_on": {
+      "type": "date"
+    },
+    "pillar": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::pillar.pillar",
+      "inversedBy": "connected_targets"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::author.author",
+      "inversedBy": "connected_targets"
+    }
+  }
+}
