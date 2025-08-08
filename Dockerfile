@@ -34,7 +34,6 @@ COPY --from=builder /app/build ./build
 COPY --from=builder /app/config ./config
 COPY --from=builder /app/src ./src
 COPY --from=builder /app/public ./public
-COPY --from=builder /app/.cache ./.cache
 COPY --from=builder /app/.strapi-updater.json ./.strapi-updater.json
 
 EXPOSE 1337
