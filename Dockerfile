@@ -38,7 +38,7 @@ COPY --from=builder /app/.strapi-updater.json ./.strapi-updater.json
 
 EXPOSE 1337
 
-# Run DB schema deploy then start Strapi
-CMD ["sh","-c","yarn deploy && yarn start"]
+# Start Strapi (database schema updates run automatically on startup)
+CMD ["yarn","start"]
 
 
