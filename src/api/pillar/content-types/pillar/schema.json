@@ -37,6 +37,12 @@
     },
     "identifier": {
       "type": "uid"
+    },
+    "cases": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::case.case",
+      "mappedBy": "pillar"
     }
   }
 }
