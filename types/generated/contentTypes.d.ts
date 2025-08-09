@@ -467,6 +467,7 @@ export interface ApiPillarPillar extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     edited_on: Schema.Attribute.Date;
     identifier: Schema.Attribute.UID;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

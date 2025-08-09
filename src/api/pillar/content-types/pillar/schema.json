@@ -43,6 +43,16 @@
       "relation": "oneToMany",
       "target": "api::case.case",
       "mappedBy": "pillar"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }
